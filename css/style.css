@@ -1490,16 +1490,6 @@ footer {
   backdrop-filter: blur(2px);
 }
 
-/* Laço Maio Verde — inline no logo */
-.maio-laco {
-  display: inline-block;
-  width: 22px;
-  height: 15px;
-  vertical-align: middle;
-  margin-left: 7px;
-  flex-shrink: 0;
-}
-
 /* Selo Maio Verde */
 .maio-verde-badge {
   position: fixed;
