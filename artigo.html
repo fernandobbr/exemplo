@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FM Notícias — Informação em tempo real">
+  <title>FM Notícias</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- BARRA DE PROGRESSO DE LEITURA -->
+<div id="readingProgress"></div>
+
+<!-- BARRA SUPERIOR -->
+<div class="top-bar">
+  <div class="container">
+    <span class="top-bar-date" id="currentDate"></span>
+    <div class="top-bar-right">
+      <div class="social-icons">
+        <a href="javascript:void(0)" style="cursor:default" onclick="return false" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="javascript:void(0)" style="cursor:default" onclick="return false" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="javascript:void(0)" style="cursor:default" onclick="return false" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a>
+        <a href="javascript:void(0)" style="cursor:default" onclick="return false" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        <a href="javascript:void(0)" style="cursor:default" onclick="return false" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+      </div>
+      <button class="dark-toggle" id="darkToggle"><i class="bi bi-moon-fill"></i> Modo Escuro</button>
+    </div>
+  </div>
+</div>
+
+<!-- CABEÇALHO -->
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <span class="logo-name">FM <span>Notícias</span></span>
+      <span class="logo-tagline">Informação em tempo real</span>
+    </a>
+    <div class="header-search">
+      <input type="search" id="searchInput" placeholder="Buscar notícias..." aria-label="Busca">
+      <button id="searchBtn"><i class="bi bi-search"></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- NAVEGAÇÃO -->
+<nav class="main-nav" aria-label="Menu principal">
+  <div class="container">
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><i class="bi bi-list"></i></button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Início</a></li>
+      <li class="has-dropdown"><a href="cidade.html">Cidade <i class="bi bi-chevron-down" style="font-size:0.6rem"></i></a>
+        <ul class="nav-dropdown">
+          <li><a href="#">Trânsito</a></li>
+          <li><a href="#">Segurança</a></li>
+          <li><a href="#">Saúde</a></li>
+          <li><a href="#">Educação</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown"><a href="politica.html">Política <i class="bi bi-chevron-down" style="font-size:0.6rem"></i></a>
+        <ul class="nav-dropdown"><li><a href="#">Municipal</a></li><li><a href="#">Estadual</a></li><li><a href="#">Federal</a></li></ul>
+      </li>
+      <li><a href="brasil.html">Brasil</a></li>
+      <li><a href="economia.html">Economia</a></li>
+      <li class="has-dropdown"><a href="esportes.html">Esportes <i class="bi bi-chevron-down" style="font-size:0.6rem"></i></a>
+        <ul class="nav-dropdown"><li><a href="#">Futebol</a></li><li><a href="#">Outros esportes</a></li></ul>
+      </li>
+      <li><a href="entretenimento.html">Entretenimento</a></li>
+      <li><a href="tecnologia.html">Tecnologia</a></li>
+      <li><a href="#">Classificados</a></li>
+      <li><a href="#">Anuncie</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- TICKER -->
+<div class="breaking-bar">
+  <div class="container">
+    <span class="breaking-label">Últimas</span>
+    <div class="ticker-wrap">
+      <div class="ticker-track">
+        <span class="ticker-item"><a href="artigo.html?id=1">Novo viaduto é inaugurado na Avenida Central</a></span>
+        <span class="ticker-item"><a href="artigo.html?id=3">UPA do bairro São Paulo tem obras iniciadas</a></span>
+        <span class="ticker-item"><a href="artigo.html?id=5">Concurso público abre 240 vagas; inscrições até sexta</a></span>
+        <span class="ticker-item"><a href="artigo.html?id=7">Frente fria derruba temperatura 8°C nesta quinta</a></span>
+        <span class="ticker-item"><a href="artigo.html?id=9">Ciclovia da Av. Brasil tem segundo trecho entregue</a></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BREADCRUMB (preenchido por portal.js) -->
+<div class="breadcrumb-nav">
+  <div class="container">
+    <div id="articleBreadcrumb"></div>
+  </div>
+</div>
+
+<!-- CONTEÚDO -->
+<div class="article-page">
+  <div class="container">
+    <div class="article-layout">
+
+      <!-- COLUNA PRINCIPAL -->
+      <main>
+
+        <!-- Conteúdo dinâmico do artigo (preenchido por portal.js) -->
+        <div id="articleContent">
+          <div class="article-loading">
+            <div class="loading-spinner"></div>
+            <p>Carregando artigo…</p>
+          </div>
+        </div>
+
+        <!-- Artigos relacionados (preenchido por portal.js) -->
+        <div id="relatedArticles"></div>
+
+        <!-- SEÇÃO DE COMENTÁRIOS -->
+        <section class="comments-section" id="commentsSection">
+          <h2 class="comments-title">
+            <i class="bi bi-chat-dots-fill"></i>
+            Comentários (<span id="commentsCount">0</span>)
+          </h2>
+
+          <form id="commentForm" class="comment-form" novalidate>
+            <div class="comment-form-row">
+              <input type="text" id="commentName" placeholder="Seu nome *" required maxlength="60" autocomplete="name">
+            </div>
+            <div class="comment-form-row">
+              <textarea id="commentText" placeholder="Escreva seu comentário… *" required maxlength="600" rows="4"></textarea>
+            </div>
+            <button type="submit" class="comment-submit-btn">
+              <i class="bi bi-send-fill"></i> Publicar comentário
+            </button>
+          </form>
+
+          <div id="commentsList"></div>
+        </section>
+
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside>
+
+        <div class="widget">
+          <div class="widget-head"><i class="bi bi-fire"></i> Mais Lidas</div>
+          <div class="widget-body" id="sidebarMostRead">
+            <p style="font-size:0.8rem;color:var(--text-muted);padding:0.5rem 0">Carregando…</p>
+          </div>
+        </div>
+
+        <div class="ad-space">
+          <div>
+            <i class="bi bi-megaphone" style="font-size:1.5rem;display:block;margin-bottom:0.5rem"></i>
+            Anuncie aqui<br>
+            <small>Contate a redação</small>
+          </div>
+        </div>
+
+        <div class="widget">
+          <div class="widget-head"><i class="bi bi-envelope-fill"></i> Newsletter</div>
+          <div class="newsletter-body">
+            <p class="newsletter-desc">Receba as notícias mais importantes diretamente no seu e-mail.</p>
+            <form id="newsletterForm" novalidate>
+              <input class="newsletter-input" type="email" placeholder="Seu e-mail" required>
+              <button type="submit" class="newsletter-btn">Quero receber</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="widget">
+          <div class="widget-head"><i class="bi bi-calendar3"></i> Arquivo</div>
+          <div class="widget-body">
+            <div class="archive-item"><a href="#" class="archive-month">Maio 2026</a><span class="archive-count">38</span></div>
+            <div class="archive-item"><a href="#" class="archive-month">Abril 2026</a><span class="archive-count">124</span></div>
+            <div class="archive-item"><a href="#" class="archive-month">Março 2026</a><span class="archive-count">117</span></div>
+            <div class="archive-item"><a href="#" class="archive-month">Fevereiro 2026</a><span class="archive-count">98</span></div>
+            <div class="archive-item"><a href="#" class="archive-month">Janeiro 2026</a><span class="archive-count">105</span></div>
+          </div>
+        </div>
+
+        <div class="widget">
+          <div class="widget-head"><i class="bi bi-tags-fill"></i> Tags</div>
+          <div class="tags-wrap">
+            <a href="busca.html?s=obras" class="tag">Obras</a>
+            <a href="busca.html?s=trânsito" class="tag">Trânsito</a>
+            <a href="busca.html?s=saúde" class="tag">Saúde</a>
+            <a href="busca.html?s=política" class="tag">Política</a>
+            <a href="busca.html?s=esportes" class="tag">Esportes</a>
+            <a href="busca.html?s=economia" class="tag">Economia</a>
+            <a href="busca.html?s=tecnologia" class="tag">Tecnologia</a>
+            <a href="busca.html?s=cultura" class="tag">Cultura</a>
+          </div>
+        </div>
+
+        <div class="ad-space">
+          <div>
+            <i class="bi bi-display" style="font-size:1.5rem;display:block;margin-bottom:0.5rem"></i>
+            Publicidade<br>
+            <small>300 × 250</small>
+          </div>
+        </div>
+
+      </aside>
+
+    </div><!-- /article-layout -->
+  </div>
+</div>
+
+<!-- RODAPÉ -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="margin-bottom:0.5rem">
+          <span class="logo-name">FM <span>Notícias</span></span>
+        </a>
+        <p class="footer-desc">Portal de notícias regionais com cobertura completa de cidade, política, esportes e entretenimento.</p>
+        <div class="footer-social">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+          <a href="#"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Editorias</h3>
+        <ul class="footer-links">
+          <li><a href="cidade.html">Cidade</a></li>
+          <li><a href="politica.html">Política</a></li>
+          <li><a href="brasil.html">Brasil</a></li>
+          <li><a href="economia.html">Economia</a></li>
+          <li><a href="esportes.html">Esportes</a></li>
+          <li><a href="entretenimento.html">Entretenimento</a></li>
+          <li><a href="tecnologia.html">Tecnologia</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Institucional</h3>
+        <ul class="footer-links">
+          <li><a href="#">Quem somos</a></li>
+          <li><a href="#">Redação</a></li>
+          <li><a href="#">Expediente</a></li>
+          <li><a href="#">Privacidade</a></li>
+          <li><a href="#">Fale Conosco</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Contato</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:redacao@fmnoticias.com.br">redacao@fmnoticias.com.br</a></li>
+          <li><a href="tel:+554599990000">(45) 9999-0000</a></li>
+          <li><a href="#">Anuncie aqui</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 FM Notícias. Todos os direitos reservados.</span>
+      <a href="#">Voltar ao topo <i class="bi bi-arrow-up"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- BOTÃO VOLTAR AO TOPO -->
+<button id="backToTop" aria-label="Voltar ao topo">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- BANNER DE COOKIES -->
+<div id="cookieConsent">
+  <p><i class="bi bi-shield-check"></i> Usamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href="#" style="color:inherit;text-decoration:underline">Política de Privacidade</a>.</p>
+  <button id="cookieAccept">Aceitar e fechar</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/portal.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

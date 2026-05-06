@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tecnologia — FM Notícias: inovação, startups, apps e o futuro digital.">
+  <title>Tecnologia — FM Notícias</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="top-bar"><div class="container"><span class="top-bar-date" id="currentDate">Quarta-feira, 06 de maio de 2026</span><div class="top-bar-right"><div class="social-icons"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-twitter-x"></i></a><a href="#"><i class="bi bi-youtube"></i></a><a href="#"><i class="bi bi-whatsapp"></i></a></div><button class="dark-toggle" id="darkToggle"><i class="bi bi-moon-fill"></i> Modo Escuro</button></div></div></div>
+
+<header class="site-header"><div class="container"><a href="index.html" class="logo"><span class="logo-name">FM <span>Notícias</span></span><span class="logo-tagline">Informação em tempo real</span></a><div class="header-search"><input type="search" id="searchInput" placeholder="Buscar notícias..."><button id="searchBtn"><i class="bi bi-search"></i></button></div></div></header>
+
+<nav class="main-nav"><div class="container"><button class="nav-toggle" id="navToggle" aria-expanded="false"><i class="bi bi-list"></i></button><ul class="nav-menu" id="navMenu"><li><a href="index.html">Início</a></li><li class="has-dropdown"><a href="cidade.html">Cidade <i class="bi bi-chevron-down" style="font-size:0.6rem"></i></a><ul class="nav-dropdown"><li><a href="#">Trânsito</a></li><li><a href="#">Segurança</a></li><li><a href="#">Saúde</a></li><li><a href="#">Educação</a></li></ul></li><li class="has-dropdown"><a href="politica.html">Política <i class="bi bi-chevron-down" style="font-size:0.6rem"></i></a><ul class="nav-dropdown"><li><a href="#">Municipal</a></li><li><a href="#">Estadual</a></li><li><a href="#">Federal</a></li></ul></li><li><a href="brasil.html">Brasil</a></li><li><a href="economia.html">Economia</a></li><li class="has-dropdown"><a href="esportes.html">Esportes <i class="bi bi-chevron-down" style="font-size:0.6rem"></i></a><ul class="nav-dropdown"><li><a href="#">Futebol</a></li><li><a href="#">Outros esportes</a></li></ul></li><li><a href="entretenimento.html">Entretenimento</a></li><li><a href="tecnologia.html" class="active">Tecnologia</a></li><li><a href="#">Classificados</a></li><li><a href="#">Anuncie</a></li></ul></div></nav>
+
+<div class="breaking-bar"><div class="container"><span class="breaking-label">Últimas</span><div class="ticker-wrap"><div class="ticker-track"><span class="ticker-item"><a href="#">Startup paranaense levanta R$ 5 mi em série A</a></span><span class="ticker-item"><a href="#">Prefeitura lança app para solicitar serviços públicos</a></span><span class="ticker-item"><a href="#">Universidade instala laboratório de inteligência artificial</a></span><span class="ticker-item"><a href="#">Paraná é referência nacional em governo digital</a></span><span class="ticker-item"><a href="#">5G chega a mais 8 cidades do interior do Paraná</a></span></div></div></div></div>
+
+<div class="breadcrumb-nav"><div class="container"><ol><li><a href="index.html"><i class="bi bi-house-fill"></i> Início</a></li><li>Tecnologia</li></ol></div></div>
+
+<div class="cat-page-header"><div class="container"><div><h1 class="cat-page-title"><span>Tecnologia</span></h1><p class="cat-page-desc">Inovação, startups, inteligência artificial, apps e o universo digital que transforma o cotidiano.</p></div><span class="cat-page-count"><i class="bi bi-newspaper"></i> 54 matérias este mês</span></div></div>
+
+<section class="cat-hero"><div class="container"><div class="cat-hero-grid">
+  <article class="cat-hero-main">
+    <div class="cat-hero-main-img"><a href="artigo.html?id=10"><img src="img/startup.webp" alt="Startup agtech paranaense" width="900" height="370" loading="eager"></a></div>
+    <div class="cat-hero-main-body">
+      <span class="article-cat">Startups</span>
+      <a href="#" class="article-title">Startup paranaense de agtech recebe aporte de R$ 5 milhões em rodada Série A liderada por fundo europeu</a>
+      <p class="article-excerpt">A plataforma conecta produtores rurais a tecnologias de monitoramento de solo e previsão climática por satélite. Com o investimento, a empresa vai expandir para 3 novos estados até 2027.</p>
+      <div class="article-meta"><i class="bi bi-clock"></i> Há 45 minutos &nbsp;·&nbsp; <i class="bi bi-person"></i> Letícia Ferreira <span class="badge-hot">Em destaque</span></div>
+    </div>
+  </article>
+  <div class="cat-hero-aside">
+    <article class="cat-hero-aside-item">
+      <div class="cat-hero-aside-img"><a href="javascript:void(0)" style="cursor:default" onclick="return false;">
+            <div class="img-badge-wrapper">
+              <img src="https://picsum.photos/seed/tec-h2/500/300?grayscale" alt="App prefeitura" width="500" height="300" loading="lazy">
+              <span class="img-example-badge" style="top:5px;right:5px;font-size:0.55rem">EXEMPLO</span>
+            </div>
+          </a></div>
+      <div class="cat-hero-aside-body"><span class="article-cat">Governo Digital</span><a href="#" class="article-title">Prefeitura lança app que permite solicitar 48 serviços públicos pelo celular sem sair de casa</a><div class="article-meta"><i class="bi bi-clock"></i> Há 2 horas <span class="badge-hot">Muito acessado</span></div></div>
+    </article>
+    <article class="cat-hero-aside-item">
+      <div class="cat-hero-aside-img"><a href="javascript:void(0)" style="cursor:default" onclick="return false;">
+            <div class="img-badge-wrapper">
+              <img src="https://picsum.photos/seed/tec-h3/500/300?grayscale" alt="Laboratório de IA" width="500" height="300" loading="lazy">
+              <span class="img-example-badge" style="top:5px;right:5px;font-size:0.55rem">EXEMPLO</span>
+            </div>
+          </a></div>
+      <div class="cat-hero-aside-body"><span class="article-cat">IA</span><a href="#" class="article-title">Universidade Estadual inaugura laboratório de inteligência artificial com 80 equipamentos de última geração</a><div class="article-meta"><i class="bi bi-clock"></i> Há 3 horas</div></div>
+    </article>
+  </div>
+</div></div></section>
+
+<div class="cat-grid-section"><div class="container"><div class="content-sidebar-grid">
+  <main>
+    <div class="section-header" style="margin-bottom:1rem"><h2 class="section-title">Todas as notícias</h2></div>
+    <div class="news-grid">
+      <article class="news-card"><div class="news-card-img-wrap"><a href="javascript:void(0)" style="cursor:default" onclick="return false;">
+            <div class="img-badge-wrapper">
+              <img class="news-card-img" src="https://picsum.photos/seed/tec-1/400/250?grayscale" alt="" width="400" height="250" loading="lazy">
+              <span class="img-example-badge" style="top:5px;right:5px;font-size:0.55rem">EXEMPLO</span>
+            </div>
+          </a></div><div class="news-card-body"><span class="article-cat">Conectividade</span><a href="#" class="article-title">5G chega a mais 8 municípios do interior do Paraná com cobertura para 800 mil habitantes</a><div class="article-meta"><i class="bi bi-clock"></i> Há 4h</div></div></article>
+      <article class="news-card"><div class="news-card-img-wrap"><a href="javascript:void(0)" style="cursor:default" onclick="return false;">
+            <div class="img-badge-wrapper">
+              <img class="news-card-img" src="https://picsum.photos/seed/tec-2/400/250?grayscale" alt="" width="400" height="250" loading="lazy">
+              <span class="img-example-badge" style="top:5px;right:5px;font-size:0.55rem">EXEMPLO</span>
+            </div>
+          </a></div><div class="news-card-body"><span class="article-cat">Educação Digital</span><a href="#" class="article-title">Escola pública lança projeto de programação para alunos do ensino médio com certificação</a><div class="article-meta"><i class="bi bi-clock"></i> Há 5h</div></div></article>
+      <article class="news-card"><div class="news-card-img-wrap"><a href="javascript:void(0)" style="cursor:default" onclick="return false;">
+            <div class="img-badge-wrapper">
+              <img class="news-card-img" src="https://picsum.photos/seed/tec-3/400/250?grayscale" alt="" width="400" height="250" loading="lazy">
+              <span class="img-example-badge" style="top:5px;right:5px;font-size:0.55rem">EXEMPLO</span>
+            </div>
+          </a></div><div class="news-card-body"><span class="article-cat">Indústria 4.0</span><a href="#" class="article-title">Fábrica local automatiza linha de produção e reduz desperdício em 35% com robótica</a><div class="article-meta"><i class="bi bi-clock"></i> Há 6h</div></div></article>
+      <article class="news-card"><div class="news-card-img-wrap"><a href="javascript:void(0)" style="cursor:default" onclick="return false;">
+            <div class="img-badge-wrapper">
+              <img class="news-card-img" src="https://picsum.photos/seed/tec-4/400/250?grayscale" alt="" width="400" height="250" loading="lazy">
+              <span class="img-example-badge" style="top:5px;right:5px;font-size:0.55rem">EXEMPLO</span>
+            </div>
+          </a></div><div class="news-card-body"><span class="article-cat">Saúde Digital</span><a href="#" class="article-title">Hospital usa IA para reduzir em 40% o tempo de diagnóstico por imagem em casos urgentes</a><div class="article-meta"><i class="bi bi-clock"></i> Há 7h</div></div></article>
+      <article class="news-card"><div class="news-card-img-wrap"><a href="javascript:void(0)" style="cursor:default" onclick="return false;">
+            <div class="img-badge-wrapper">
+              <img class="news-card-img" src="https://picsum.photos/seed/tec-5/400/250?grayscale" alt="" width="400" height="250" loading="lazy">
+              <span class="img-example-badge" style="top:5px;right:5px;font-size:0.55rem">EXEMPLO</span>
+            </div>
+          </a></div><div class="news-card-body"><span class="article-cat">Startups</span><a href="#" class="article-title">Aceleradora de Curitiba seleciona 15 startups paranaenses para programa com mentoria e crédito</a><div class="article-meta"><i class="bi bi-clock"></i> Há 8h</div></div></article>
+      <article class="news-card"><div class="news-card-img-wrap"><a href="javascript:void(0)" style="cursor:default" onclick="return false;">
+            <div class="img-badge-wrapper">
+              <img class="news-card-img" src="https://picsum.photos/seed/tec-6/400/250?grayscale" alt="" width="400" height="250" loading="lazy">
+              <span class="img-example-badge" style="top:5px;right:5px;font-size:0.55rem">EXEMPLO</span>
+            </div>
+          </a></div><div class="news-card-body"><span class="article-cat">Cibersegurança</span><a href="#" class="article-title">Pesquisadores da UTFPR descobrem vulnerabilidade em sistemas de câmeras industriais</a><div class="article-meta"><i class="bi bi-clock"></i> Há 9h</div></div></article>
+      <article class="news-card"><div class="news-card-img-wrap"><a href="javascript:void(0)" style="cursor:default" onclick="return false;">
+            <div class="img-badge-wrapper">
+              <img class="news-card-img" src="https://picsum.photos/seed/tec-7/400/250?grayscale" alt="" width="400" height="250" loading="lazy">
+              <span class="img-example-badge" style="top:5px;right:5px;font-size:0.55rem">EXEMPLO</span>
+            </div>
+          </a></div><div class="news-card-body"><span class="article-cat">Agronegócio</span><a href="#" class="article-title">Drones mapeiam área de 50 mil hectares em 3 horas para controle de pragas no Oeste do Paraná</a><div class="article-meta"><i class="bi bi-clock"></i> Há 10h</div></div></article>
+      <article class="news-card"><div class="news-card-img-wrap"><a href="javascript:void(0)" style="cursor:default" onclick="return false;">
+            <div class="img-badge-wrapper">
+              <img class="news-card-img" src="https://picsum.photos/seed/tec-8/400/250?grayscale" alt="" width="400" height="250" loading="lazy">
+              <span class="img-example-badge" style="top:5px;right:5px;font-size:0.55rem">EXEMPLO</span>
+            </div>
+          </a></div><div class="news-card-body"><span class="article-cat">Governo Digital</span><a href="#" class="article-title">Paraná é premiado como estado mais avançado em digitalização de serviços públicos</a><div class="article-meta"><i class="bi bi-clock"></i> Há 11h</div></div></article>
+      <article class="news-card"><div class="news-card-img-wrap"><a href="javascript:void(0)" style="cursor:default" onclick="return false;">
+            <div class="img-badge-wrapper">
+              <img class="news-card-img" src="https://picsum.photos/seed/tec-9/400/250?grayscale" alt="" width="400" height="250" loading="lazy">
+              <span class="img-example-badge" style="top:5px;right:5px;font-size:0.55rem">EXEMPLO</span>
+            </div>
+          </a></div><div class="news-card-body"><span class="article-cat">IA</span><a href="#" class="article-title">Assistente de IA desenvolvido por equipe local ajuda agricultores a identificar doenças em culturas</a><div class="article-meta"><i class="bi bi-clock"></i> Há 12h</div></div></article>
+    </div>
+    <div class="pagination-wrap"><ul class="pagination"><li><a href="#"><i class="bi bi-chevron-left"></i></a></li><li class="active"><span>1</span></li><li><a href="#">2</a></li><li><a href="#">3</a></li><li class="dots"><span>…</span></li><li><a href="#">5</a></li><li><a href="#"><i class="bi bi-chevron-right"></i></a></li></ul></div>
+  </main>
+  <aside>
+    <div class="widget"><div class="widget-head"><i class="bi bi-fire"></i> Mais Lidas</div>
+            <div class="widget-body" id="sidebarMostRead">
+              <p style="font-size:0.8rem;color:var(--text-muted);padding:0.5rem 0">Carregando…</p>
+                        </div>
+          </div>
+    <div class="ad-space"><a href="#" target="_blank"><img src="img/ads_coca.gif" alt="Anúncio Coca-Cola" style="width:100%;height:100%;object-fit:cover;"></a></div>
+    <div class="widget"><div class="widget-head"><i class="bi bi-envelope-fill"></i> Newsletter</div><div class="newsletter-body"><p class="newsletter-desc">Inovação e tecnologia no seu e-mail toda semana.</p><form id="newsletterForm" novalidate><input class="newsletter-input" type="email" placeholder="Seu e-mail" required><button type="submit" class="newsletter-btn">Quero receber</button></form></div></div>
+    <div class="widget"><div class="widget-head"><i class="bi bi-tags-fill"></i> Tags</div><div class="tags-wrap"><a href="#" class="tag">IA</a><a href="#" class="tag">5G</a><a href="#" class="tag">Startup</a><a href="#" class="tag">Agtech</a><a href="#" class="tag">Robótica</a><a href="#" class="tag">App</a><a href="#" class="tag">Drones</a><a href="#" class="tag">Blockchain</a><a href="#" class="tag">Indústria 4.0</a></div></div>
+  </aside>
+</div></div></div>
+
+<footer><div class="container"><div class="footer-top"><div class="footer-brand"><a href="index.html" class="logo" style="margin-bottom:0.5rem"><span class="logo-name">FM <span>Notícias</span></span></a><p class="footer-desc">Portal de notícias regionais com cobertura completa de cidade, política, esportes e entretenimento.</p><div class="footer-social"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-twitter-x"></i></a><a href="#"><i class="bi bi-youtube"></i></a><a href="#"><i class="bi bi-whatsapp"></i></a></div></div><div><h3 class="footer-col-title">Editorias</h3><ul class="footer-links"><li><a href="cidade.html">Cidade</a></li><li><a href="politica.html">Política</a></li><li><a href="brasil.html">Brasil</a></li><li><a href="economia.html">Economia</a></li><li><a href="esportes.html">Esportes</a></li><li><a href="entretenimento.html">Entretenimento</a></li><li><a href="tecnologia.html">Tecnologia</a></li></ul></div><div><h3 class="footer-col-title">Institucional</h3><ul class="footer-links"><li><a href="#">Quem somos</a></li><li><a href="#">Redação</a></li><li><a href="#">Expediente</a></li><li><a href="#">Privacidade</a></li><li><a href="#">Fale Conosco</a></li></ul></div><div><h3 class="footer-col-title">Contato</h3><ul class="footer-links"><li><a href="mailto:redacao@fmnoticias.com.br">redacao@fmnoticias.com.br</a></li><li><a href="tel:+554599990000">(45) 9999-0000</a></li><li><a href="#">Anuncie aqui</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 FM Notícias. Todos os direitos reservados.</span><a href="#">Voltar ao topo <i class="bi bi-arrow-up"></i></a></div></div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/data.js"></script>
+  <script src="js/portal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
