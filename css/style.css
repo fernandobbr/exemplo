@@ -50,6 +50,8 @@
 /* --- RESET BASE --- */
 *, *::before, *::after { box-sizing: border-box; }
 
+html { overflow-x: hidden; }
+
 body {
   font-family: var(--font-body);
   background-color: var(--bg);
@@ -1319,6 +1321,9 @@ footer {
   .header-search { display: none; }
   .nav-toggle { display: block; }
 
+  /* Desacopla o menu do container para ocupar a largura total da tela */
+  .main-nav .container { position: static; }
+
   .nav-menu {
     display: none;
     flex-direction: column;
@@ -1338,18 +1343,33 @@ footer {
   .nav-dropdown { position: static; border: none; background: var(--gray-800); display: none; }
   .nav-menu > li.open .nav-dropdown { display: block; }
   .nav-menu > li:hover .nav-dropdown { display: none; }
-  .nav-menu > li.open .nav-dropdown { display: block; }
 
-  .hero-sec-img-wrap img { height: 120px; }
-  .hero-main-img-wrap img { height: 260px; }
-  .hero-main .article-title { font-size: 1.3rem; }
-  .article-main-title { font-size: 1.55rem; }
-  .article-featured-img img { height: 260px; }
+  /* Oculta ícones sociais na top bar para evitar overflow */
+  .social-icons { display: none; }
+
+  .hero-secondary { flex-direction: column; }
+  .hero-sec-img-wrap img { height: 200px; }
+  .hero-main-img-wrap img { height: 240px; }
+  .hero-main .article-title { font-size: 1.25rem; }
+  .article-main-title { font-size: 1.4rem; }
+  .article-featured-img img { height: 220px; }
   .author-box { flex-direction: column; align-items: center; text-align: center; }
 
   .news-grid { grid-template-columns: 1fr; }
   .news-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
   .news-card.featured .news-card-img { min-height: 160px; }
+
+  /* Categoria: colapsa grade e aside */
+  .cat-hero-aside { flex-direction: column; }
+  .cat-hero-aside-img img { height: 200px; }
+  .cat-grid-section .news-grid { grid-template-columns: 1fr; }
+
+  /* Cabeçalho da categoria empilha em telas pequenas */
+  .cat-page-header .container { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
+
+  /* Badge Maio Verde menor em mobile */
+  .maio-verde-badge { font-size: 0.65rem; padding: 0.4rem 0.9rem; left: 15px; bottom: 80px; gap: 0.5rem; }
+  .maio-verde-badge i { font-size: 1rem; }
 
   .footer-top { grid-template-columns: 1fr; gap: 1.5rem; }
   .footer-bottom { flex-direction: column; gap: 0.4rem; text-align: center; }
@@ -1357,9 +1377,12 @@ footer {
 
 @media (max-width: 480px) {
   .top-bar-date { display: none; }
-  .hero-secondary { flex-direction: column; }
+  .dark-toggle { font-size: 0.62rem; padding: 0.2rem 0.5rem; }
   .hero-sec-img-wrap img { height: 180px; }
   .breaking-label { display: none; }
+  .news-list-img { width: 70px; height: 52px; }
+  .article-main-title { font-size: 1.2rem; }
+  .cat-hero-aside-img img { height: 170px; }
 }
 
 /* ============================================================
@@ -1416,7 +1439,7 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  background: var(--card-bg);
+  background: var(--bg-card);
   border-top: 2px solid var(--border);
   padding: 0.85rem 1.25rem;
   display: flex;
@@ -1515,8 +1538,8 @@ footer {
   border: 2px solid var(--border);
   border-radius: 6px;
   font-size: 0.95rem;
-  background: var(--card-bg);
-  color: var(--text-main);
+  background: var(--bg-card);
+  color: var(--text-primary);
   outline: none;
   transition: border-color 0.2s;
 }
@@ -1540,7 +1563,7 @@ footer {
 .search-results-title {
   font-size: 1.05rem;
   font-weight: 600;
-  color: var(--text-main);
+  color: var(--text-primary);
   margin: 1rem 0 1.25rem;
   padding-bottom: 0.6rem;
   border-bottom: 2px solid var(--border);
